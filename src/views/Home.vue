@@ -1,37 +1,55 @@
 <template>
   <div class="home">
+    <!--<Navbar></Navbar>-->
+      <!--<Hero/>-->
+    <!--<login></login>-->
+    <!--<router-view/>-->
     <Navbar></Navbar>
-      <Hero/>
-      <Products/>
+    <Hero></Hero>
+    <about></about>
 
-      <div class="container h-100">
-        <div class="row p-5 h-100 justify-content-center align-items-center">
-          <div class="col-md-6">
-            <img src="/img/svg/product.svg" alt="" width="400">
-          </div>
-          <div class="col-md-6">
-            <h3>Learn More About us</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quaerat voluptate iusto? Nihil voluptas vitae veritatis magnam reprehenderit, reiciendis ex? Libero quasi natus veniam voluptatum, voluptas exercitationem ratione consectetur et!
-            </p>
-             <button class="btn custom-btn btn-outline-primary mr-4">Browse Products</button>
-          </div>
-        </div>
-      </div>
-      <login></login>
+
   </div>
+  <!--<v-toolbar v-if="checkk>0" color="white" tabs>-->
+  <!--<v-toolbar-title>-->
+
+  <!--</v-toolbar-title>-->
+  <!--<v-spacer></v-spacer>-->
+  <!--<div style="width: 35%;">-->
+  <!--<v-text-field-->
+  <!--v-model="search"-->
+  <!--append-icon="search"-->
+  <!--label="Search"-->
+  <!--hide-details-->
+
+  <!--&gt;</v-text-field>-->
+  <!--</div>-->
+  <!--<v-tabs slot="extension" grow style="cursor: pointer;">-->
+  <!--<v-tabs-slider color="blue"></v-tabs-slider>-->
+  <!--<v-tab @click="showbrands(chosenbrand.brand)">-->
+  <!--<img style="height: 30px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfWjqnsj7wQTEm2-jsn8I8LgwoSl3ZKa0knUQ169-sFQIG4UffQ">-->
+  <!--</v-tab>-->
+  <!--<v-tab-->
+  <!--v-for="models in filteredModels"-->
+  <!--@click="showmod(models)"-->
+  <!--&gt;-->
+  <!--{{ models.model }}-->
+  <!--</v-tab>-->
+  <!--</v-tabs>-->
+  <!--</v-toolbar>-->
 </template>
 
 <script>
 // @ is an alias to /src
 import Hero from "@/components/Hero.vue";
-import Products from "@/sections/Products.vue";
-import Login from "@/components/Login.vue";
+import about from "@/components/about.vue";
+import Navbar from "@/components/Navbar.vue";
+
 
 export default {
   name: "home",
   components: {
-    Hero,Products,Login
+    Hero,Navbar,about
   }
 };
 </script>

@@ -24,19 +24,45 @@
             <div class="form-group">
                <input type="text" placeholder="Product Name" v-model="product.name" class="form-control">
             </div>
-
+              <div class="form-group">
+                  <input type="text" placeholder="brand" v-model="product.brand" class="form-control">
+              </div>
             <div class="form-group">
               <input type="text" placeholder="Price" v-model="product.price" class="form-control">
             </div>
-
+              <div class="form-group">
+                  <input type="text" placeholder="Active Ingredients" v-model="product.activeIngr" class="form-control">
+              </div>
+              <div class="form-group">
+                  <input type="text" placeholder="Capacity" v-model="product.capacity" class="form-control">
+              </div>
+              <div class="form-group">
+                  <input type="text" placeholder="Effect" v-model="product.effect" class="form-control">
+              </div>
+              <div class="form-group">
+                  <input type="text" placeholder="Image" v-model="product.image" class="form-control">
+              </div>
+              <div class="form-group">
+                  <input type="text" placeholder="In Stock" v-model="product.inStock" class="form-control">
+              </div>
+              <div class="form-group">
+                  <input type="text" placeholder="Model" v-model="product.model" class="form-control">
+              </div>
+              <div class="form-group">
+                  <input type="text" placeholder="Type" v-model="product.type" class="form-control">
+              </div>
+              <div class="form-group">
+                  <input type="text" placeholder="Usage" v-model="product.usage" class="form-control">
+              </div>
             <div class="form-group">
                 <button @click="saveData" class="btn btn-primary">Save Data</button>
+                <button @click="saveDataBrand" class="btn btn-primary">Brand</button>
             </div>
             <hr>
 
             <h3>Products list</h3>
-
-            <table>
+            <div>
+            <table >
               <thead>
                 <tr>
                   <th>Name</th>
@@ -54,7 +80,7 @@
 
               </tbody>
             </table>
-
+            </div>
           </div>
       </div>
     
@@ -75,8 +101,22 @@ export default {
     return {
         products: [],
         product: {
-          name:null,
-          price:null
+            name: null,
+            price: null,
+            brand:null,
+            activeIngr:null,
+            capacity:null,
+            effect:null,
+            image:null,
+            inStock:null,
+            model:null,
+            type:null,
+            usage:null
+
+        },
+        branda: {
+            brand: null,
+
         }
     }
   },
@@ -106,6 +146,18 @@ export default {
       });
 
     },
+      saveDataBrand(){
+
+          db.collection("brands").add(this.branda)
+              .then((docRef) => {
+                  console.log("Document written with ID: ", docRef.id);
+                  this.readData();
+              })
+              .catch(function(error) {
+                  console.error("Error adding document: ", error);
+              });
+
+      },
 
     reset(){
       // Object.assign(this.$data, this.$options.data.apply(this));

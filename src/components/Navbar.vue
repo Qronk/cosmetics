@@ -1,59 +1,96 @@
 <template>
-  <div class="hello">
-   <nav class="navbar custom-nav fixed-top navbar-expand-lg navbar-light bg-light">
-     <div class="container">
-        <router-link class="navbar-brand" to="/">Vue Shop</router-link>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <router-link to="/home" class="nav-link">Home</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/products" class="nav-link" href="#">Products</router-link>
-            </li>
-
-            <li class="nav-item">
-              <router-link to="/about" class="nav-link" href="#">About</router-link>
-            </li>
-          
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <a class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#login">Get Start</a>
-          </form>
-        </div>
-
-     </div>
-
-</nav>
-    
+  <div class="Navbar">
+      <header class="header-section">
+          <div class="header-top">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-2">
+                          <!-- logo -->
+                          <a href="./index.html" class="site-logo">
+                              <img src="ProfLogo1.png">
+                          </a>
+                      </div>
+                      <div class="col-xl-6 col-lg-5">
+                          <form class="header-search-form">
+                              <input type="text" placeholder="Search any product">
+                              <button><i class="flaticon-search"></i></button>
+                          </form>
+                      </div>
+                      <div class="col-xl-4 col-lg-5">
+                          <div class="user-panel">
+                              <div class="up-item">
+                                  <i class="flaticon-profile"></i>
+                                  <a href="#">Sign</a> In or <a href="#">Create Account</a>
+                              </div>
+                              <div class="up-item">
+                                  <div class="shopping-card">
+                                      <i class="flaticon-bag"></i>
+                                      <span>0</span>
+                                  </div>
+                                  <a href="#">Shopping Cart</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <nav class="main-navbar">
+              <div class="container">
+                  <!-- menu -->
+                  <ul class="main-menu">
+                      <li><a href="#">Главная</a></li>
+                      <li><a href="#">Магазин</a></li>
+                      <li><a href="#">Процедуры</a></li>
+                      <li><a href="#">Новинки
+                          <span class="new">New</span>
+                      </a></li>
+                      <li><a href="#">Shoes</a>
+                          <ul class="sub-menu">
+                              <li><a href="#">Sneakers</a></li>
+                              <li><a href="#">Sandals</a></li>
+                              <li><a href="#">Formal Shoes</a></li>
+                              <li><a href="#">Boots</a></li>
+                              <li><a href="#">Flip Flops</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="#">Pages</a>
+                          <ul class="sub-menu">
+                              <li><a href="./product.html">Product Page</a></li>
+                              <li><a href="./category.html">Category Page</a></li>
+                              <li><a href="./cart.html">Cart Page</a></li>
+                              <li><a href="./checkout.html">Checkout Page</a></li>
+                              <li><a href="./contact.html">Contact Page</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="#">Blog</a></li>
+                  </ul>
+              </div>
+          </nav>
+      </header>
+      <!-- Header section end -->
   </div>
 </template>
 
 <script>
-export default {
-  name: "Navbar",
-  props: {
-    msg: String
-  },
-  components:{}
-};
+    export default {
+        name: "Navbar",
+
+        data() {
+            return {
+
+            }
+        },
+        computed: {
+
+        },
+        methods: {
+
+        },
+
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  @media (min-width: 992px) { 
-    
-    .navbar.custom-nav{
-      padding-top:16px;
-      padding-bottom:16px;
-      background-color: #fff !important;
-    }
-
-   }
 
 </style>

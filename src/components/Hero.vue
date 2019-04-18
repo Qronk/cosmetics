@@ -1,47 +1,86 @@
 <template>
     <div class="hero">
-        <div class="container h-100">
-          <div class="row h-100 justify-content-center align-items-center">
-            <div class="col-md-5">
-              <div class="hero-content">
-                <h1 class="hero-title">
-                  Vue Shop For Developers
-                </h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos numquam tempora, iure delectus totam minus quam aperiam ratione dolores magni voluptates ut necessitatibus odio ipsum fuga, voluptas ab praesentium nihil?
-                </p>
-                <div class="hero-btn mt-5">
-                    <button class="btn custom-btn btn-info mr-4">Explore</button>
-                    <button class="btn custom-btn btn-outline-secondary">Products</button>
-                </div>
-              </div>
+        <!-- Hero section -->
+        <section class="hero-section">
+                    <div class="container">
+                        <div class="row">
+                            <div style="color: white; margin-top: 200px;">
+                                <span>New Arrivals</span>
+                                <h2>denim jackets</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                <a href="#" class="site-btn sb-line">DISCOVER</a>
+                                <a href="#" class="site-btn sb-white">ADD TO CART</a>
+                            </div>
+                        </div>
+                        <div class="first-text">
+                            <span>from</span>
+                            <h2>$29</h2>
+                            <p>SHOP NOW</p>
+                        </div>
+
             </div>
-            <div class="col-md-7">
-                <div class="graphic">
-                    <img src="/img/svg/graphic.svg" alt="">
-                </div>
-            </div>
-          </div>
-        </div>
+        </section>
+
+        <!-- Hero section end -->
     </div>
 </template>
 
 <script>
-export default {
-  name: "Hero",
-  props: {
-    msg: String
-  }
-};
+    export default {
+        name: "Navbar",
+
+        data() {
+            return {
+
+            }
+        },
+        computed: {
+
+        },
+        methods: {
+
+        },
+
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-  .hero{
-    padding-top: 7rem;
-    width: 100%;
-    height: 500px;
-    text-align: left;
-  }
+<style scoped>
+    .animation-box {
+        width: 75%;
+        height: 27.5rem;
+        background-color: blue;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+    .first-text {
+        font-size: 4.4rem;
+        position: absolute;
+        left: 2.5rem;
+        top: 5rem;
+        opacity: 1;
+        animation-name: topFadeOut;
+        animation-duration: 5s;
+        color: white;
+    }
+    @keyframes topFadeOut {
+        0% {
+            position: absolute;
+            top: -3rem;
+            opacity: 0;
+        }
+
+        75% {
+            position: absolute;
+            top: 25%;
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
 
 </style>
